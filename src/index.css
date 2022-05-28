@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 
+
 .M{
+  display: block;
   animation: bounce 0.7s;
   animation-timing-function: ease;
     animation-delay: 0s;
@@ -14,8 +17,24 @@
     animation-play-state: running;
 }
 
+.letter{
+  animation: pop 2s 1;
+}
+
+@keyframes pop{
+  0%{
+    transform: rotate(360deg);
+    opacity: 0;
+  }
+
+
+  100%{
+    transform: rotate(6deg);
+    opacity: 1;
+  }
+}
+
 .M:hover{
-  color: rgb(92, 255, 160);
 }
 
 @keyframes bounce {
@@ -33,4 +52,317 @@
 
                                            
   
+
+}
+
+
+
+
+.home:hover::after{
+  display: block;
+  color: lightblue;
+  letter-spacing: 3px;
+  font-weight: bold;
+  opacity: 1;
+    transition-duration: 2s;
+  transition-timing-function: ease-in;
+}
+
+.home::after{
+  content: 'Home';
+  position: absolute;
+  left: 50%;
+    transform: translate(-50%, 0);
+    display: none;
+    font-size: 1rem;
+    transition-duration: 2s;
+  transition-timing-function: ease-in;
+}
+
+.about:hover::after {
+  display: block;
+  color: lightblue;
+  font-weight: bold;
+  letter-spacing: 3px;
+  opacity: 1;
+  transition-duration: 2s;
+  transition-timing-function: ease-in;
+}
+
+.about::after {
+  content: 'About';
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: none;
+  font-size: 1rem;
+  transition-duration: 2s;
+  transition-timing-function: ease-in;
+}
+
+.skills:hover::after {
+  display: block;
+  color: lightblue;
+  letter-spacing: 3px;
+  font-weight: bold;
+  opacity: 1;
+  transition-duration: 2s;
+  transition-timing-function: ease-in;
+}
+
+.skills::after {
+  content: 'Skills';
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: none;
+  font-size: 1rem;
+  transition-duration: 2s;
+  transition-timing-function: ease-in;
+}
+
+.home:hover{
+  color:"#181818" ;
+}
+
+
+/* CUBE */
+
+@-webkit-keyframes spincube {
+
+  from,
+  to {
+    -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+
+  16% {
+    -webkit-transform: rotateY(-90deg);
+  }
+
+  33% {
+    -webkit-transform: rotateY(-90deg) rotateZ(90deg);
+  }
+
+  50% {
+    -webkit-transform: rotateY(-180deg) rotateZ(90deg);
+  }
+
+  66% {
+    -webkit-transform: rotateY(-270deg) rotateX(90deg);
+  }
+
+  83% {
+    -webkit-transform: rotateX(90deg);
+  }
+}
+
+@keyframes spincube {
+
+  from,
+  to {
+    -moz-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    -ms-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+
+  16% {
+    -moz-transform: rotateY(-90deg);
+    -ms-transform: rotateY(-90deg);
+    transform: rotateY(-90deg);
+  }
+
+  33% {
+    -moz-transform: rotateY(-90deg) rotateZ(90deg);
+    -ms-transform: rotateY(-90deg) rotateZ(90deg);
+    transform: rotateY(-90deg) rotateZ(90deg);
+  }
+
+  50% {
+    -moz-transform: rotateY(-180deg) rotateZ(90deg);
+    -ms-transform: rotateY(-180deg) rotateZ(90deg);
+    transform: rotateY(-180deg) rotateZ(90deg);
+  }
+
+  66% {
+    -moz-transform: rotateY(-270deg) rotateX(90deg);
+    -ms-transform: rotateY(-270deg) rotateX(90deg);
+    transform: rotateY(-270deg) rotateX(90deg);
+  }
+
+  83% {
+    -moz-transform: rotateX(90deg);
+    -ms-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+  }
+}
+
+.cubespinner {
+  -webkit-animation-name: spincube;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 12s;
+
+  animation-name: spincube;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 12s;
+
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+
+  -webkit-transform-origin: 150px 150px 0;
+  -moz-transform-origin: 150px 150px 0;
+  -ms-transform-origin: 150px 150px 0;
+  transform-origin: 150px 150px 0;
+}
+
+.cubespinner div {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  border: 1px solid whitesmoke;
+  background: rgba(255, 255, 255, 0.186);
+  box-shadow: inset 0 0 20px rgb(151, 196, 233);
+  line-height: 120px;
+  text-align: center;
+  font-size: 100px;
+}
+
+.cubespinner .face1 {
+  -webkit-transform: translateZ(150px);
+  -moz-transform: translateZ(150px);
+  -ms-transform: translateZ(150px);
+  transform: translateZ(150px);
+}
+
+.cubespinner .face2 {
+  -webkit-transform: rotateY(90deg) translateZ(150px);
+  -moz-transform: rotateY(90deg) translateZ(150px);
+  -ms-transform: rotateY(90deg) translateZ(150px);
+  transform: rotateY(90deg) translateZ(150px);
+}
+
+.cubespinner .face3 {
+  -webkit-transform: rotateY(90deg) rotateX(90deg) translateZ(150px);
+  -moz-transform: rotateY(90deg) rotateX(90deg) translateZ(150px);
+  -ms-transform: rotateY(90deg) rotateX(90deg) translateZ(150px);
+  transform: rotateY(90deg) rotateX(90deg) translateZ(150px);
+}
+
+.cubespinner .face4 {
+  -webkit-transform: rotateY(180deg) rotateZ(90deg) translateZ(150px);
+  -moz-transform: rotateY(180deg) rotateZ(90deg) translateZ(150px);
+  -ms-transform: rotateY(180deg) rotateZ(90deg) translateZ(150px);
+  transform: rotateY(180deg) rotateZ(90deg) translateZ(150px);
+}
+
+.cubespinner .face5 {
+  -webkit-transform: rotateY(-90deg) rotateZ(90deg) translateZ(150px);
+  -moz-transform: rotateY(-90deg) rotateZ(90deg) translateZ(150px);
+  -ms-transform: rotateY(-90deg) rotateZ(90deg) translateZ(150px);
+  transform: rotateY(-90deg) rotateZ(90deg) translateZ(150px);
+}
+
+.cubespinner .face6 {
+  -webkit-transform: rotateX(-90deg) translateZ(150px);
+  -moz-transform: rotateX(-90deg) translateZ(150px);
+  -ms-transform: rotateX(-90deg) translateZ(150px);
+  transform: rotateX(-90deg) translateZ(150px);
+}
+
+/* About page text */
+
+
+.text-container {
+  display: flex;
+  overflow: hidden;
+  /* white-space: nowrap; */
+}
+
+.text-container p {
+  overflow: hidden;
+  /* white-space: nowrap; */
+}
+
+.text-container:first-of-type {
+  /* For increasing performance 
+                       ID/Class should've been used. 
+                       For a small demo 
+                       it's okaish for now */
+  animation: showup 7s infinite;
+}
+
+.text-container p {
+  animation: reveal 1.3s;
+  animation-iteration-count: 1;
+}
+
+.text-container:last-of-type span {
+  margin-left: -355px;
+  animation: slidein 7s infinite;
+}
+
+/* @keyframes showup {
+  0% {
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+} */
+
+ /* @keyframes slidein {
+  0% {
+    margin-left: -100%;
+  }
+
+  20% {
+    margin-left: -100%;
+  }
+
+  35% {
+    margin-left: 0px;
+  }
+
+  100% {
+    margin-left: 0px;
+  }
+} */
+
+@keyframes reveal {
+  0% {
+    opacity: 0;
+    transform:translateX(-100%);
+  }
+   
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+} */
+
+
+p {
+  color: #999;
+}
+
+/* Projects Overlay */
+
+.project1:hover .project1-overlay{
+  transform: translateY(0);
 }
