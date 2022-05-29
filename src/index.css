@@ -141,6 +141,22 @@ transform: scale(0.7, 1.3);
   transition-timing-function: ease-in;
 }
 
+@media only screen and (max-width: 800px) {
+  .home::after{
+    font-size: 0.6rem;
+  }
+     .about::after {
+       font-size: 0.6rem;
+     }
+            .skills::after {
+              font-size: 0.6rem;
+            }
+
+            .projects::after {
+              font-size: 0.6rem;
+            }
+}
+
 .home:hover{
   color:"#181818" ;
 }
