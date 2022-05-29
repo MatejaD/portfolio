@@ -24,7 +24,7 @@ export default function Sidebar({ isLoading, setIsLoading }) {
         <h2>Mateja</h2>
       </div>
 
-      <div className="md:h-1/3 h-full md:w-full w-1/3 flex flex-row md:flex-col justify-evenly gap-4 md:gap-0 items-center text-3xl">
+      <div className="md:h-1/3 h-full md:w-full w-1/3 flex flex-row md:flex-col justify-evenly gap-4 md:gap-0 items-center md:text-3xl text-base">
         <span
           onClick={() => navigateToPage("/")}
           className="home cursor-pointer w-full h-12 flex justify-center items-center relative hover:text-grayDark duration-150 "
