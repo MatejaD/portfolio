@@ -7,7 +7,6 @@ import GitIcon from "../Images/CubeImages/GitLogo.png"
 import HtmlIcon from "../Images/CubeImages/HtmlIcon.png"
 import ReduxIcon from "../Images/CubeImages/ReduxIcon.png"
 
-import FluidAnimation from "react-fluid-animation"
 export default function About() {
   const [a, setA] = useState(false)
   const [b, setB] = useState(false)

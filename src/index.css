@@ -40,16 +40,13 @@
     transform: scale(1,1.3);
   }
 
-        50% {
-          transform: scale(1.3, 0.8);
-        }
+  50% {
+transform: scale(1.3, 0.8);
+}
 
-                    75% {
-                      transform: scale(0.7, 1.3);
-                    }
-
-                                           
-  
+  75% {
+transform: scale(0.7, 1.3);
+}
 
 }
 
@@ -62,7 +59,7 @@
   letter-spacing: 3px;
   font-weight: bold;
   opacity: 1;
-    transition-duration: 2s;
+  transition-duration: 2s;
   transition-timing-function: ease-in;
 }
 
@@ -146,9 +143,8 @@
 }
 
 
-/* CUBE */
 
-@-webkit-keyframes spincube {
+@keyframes spincube {
 
   from,
   to {
@@ -215,6 +211,8 @@
     transform: rotateX(90deg);
   }
 }
+
+
 
 .cubespinner {
   -webkit-animation-name: spincube;
@@ -295,25 +293,19 @@
   transform: rotateX(-90deg) translateZ(150px);
 }
 
-/* About page text */
 
 
 .text-container {
   display: flex;
   overflow: hidden;
-  /* white-space: nowrap; */
 }
 
 .text-container p {
   overflow: hidden;
-  /* white-space: nowrap; */
 }
 
 .text-container:first-of-type {
-  /* For increasing performance 
-                       ID/Class should've been used. 
-                       For a small demo 
-                       it's okaish for now */
+
   animation: showup 7s infinite;
 }
 
@@ -327,67 +319,30 @@
   animation: slidein 7s infinite;
 }
 
-/* @keyframes showup {
-  0% {
-    opacity: 0;
-  }
 
-  20% {
-    opacity: 1;
-  }
-
-  80% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-  }
-} */
-
- /* @keyframes slidein {
-  0% {
-    margin-left: -100%;
-  }
-
-  20% {
-    margin-left: -100%;
-  }
-
-  35% {
-    margin-left: 0px;
-  }
-
-  100% {
-    margin-left: 0px;
-  }
-} */
 
 @keyframes reveal {
   0% {
     opacity: 0;
     transform:translateX(-100%);
   }
-   
 
   100% {
     opacity: 1;
     transform: translateX(0);
   }
-} */
+} 
 
 
 p {
   color: #999;
 }
 
-/* Projects Overlay */
 
 .project1:hover .project1-overlay{
   transform: translateY(-100%);
 }
 
-/* Snowflakes */
 
 .snowflake{
   position: absolute;
@@ -397,8 +352,7 @@ p {
   border-radius: 100%;
   background-color: antiquewhite;
   bottom: 0;
-  /* animation-name: snowflake;
-  animation-iteration-count: infinite; */
+
 }
 
 @keyframes snowflake {
@@ -418,7 +372,6 @@ p {
 }
 
 
-/* Loading Animation */
 
 .battery {
   height: 110px;

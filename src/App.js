@@ -1,13 +1,7 @@
 import React, { useEffect, useState } from "react"
 import Sidebar from "./Components/Sidebar"
-
-import TagCloud from "react3dtagcloud"
-import FluidAnimation from "react-fluid-animation"
-
-import letter from "./letter.png"
 import Home from "./Pages/Home"
 import About from "./Pages/About"
-
 import { Route, Routes } from "react-router-dom"
 import Projects from "./Pages/Projects"
 import Loading from "./Pages/Loading"
@@ -15,17 +9,6 @@ import Loading from "./Pages/Loading"
 export default function App() {
   const [isLoading, setIsLoading] = useState()
 
-  const tagName = [
-    "Javscript",
-    "HTML5",
-    "CSS3",
-    "React",
-    "Redux",
-    "Tailwind",
-    "Firebase",
-    "Git",
-    "Netlify",
-  ]
   let array = []
 
   for (let i = 0; i <= 100; i++) {
