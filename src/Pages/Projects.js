@@ -220,12 +220,7 @@ export default function Projects() {
                         </div>
                       </div>
                       <div className="w-full h-full  border-b-2 border-background flex justify-start lg:px-6 px-1 items-start">
-                        <p
-                          style={{ fontSize: "0.75rem" }}
-                          className="lg:text-2xl "
-                        >
-                          {project.desc}
-                        </p>
+                        <p className="lg:text-2xl text-xs ">{project.desc}</p>
                       </div>
                     </div>
                   </div>

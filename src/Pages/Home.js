@@ -82,7 +82,7 @@ export default function Home() {
 
   return (
     <>
-      <article className="md:w-2/6 w-3/4  md:h-2/3 flex flex-col  justify-start items-start gap-0 md:gap-4 text-center text-4xl md:text-6xl">
+      <article className="md:w-2/6 w-full  px-2 h-full justify-center items-start  md:h-2/3 flex flex-col  md:justify-start md:items-start gap-0 md:gap-4 text-center text-4xl md:text-6xl">
         <article className="w-full flex ">
           <div className={`${h ? "M" : ""}`}>
             <span
