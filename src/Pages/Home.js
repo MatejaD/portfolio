@@ -82,7 +82,7 @@ export default function Home() {
 
   return (
     <>
-      <article className="w-1/3 h-2/3 flex flex-col justify-start items-start gap-4 text-center text-4xl md:text-6xl">
+      <article className="md:w-1/6 w-3/4  md:h-2/3 flex flex-col  justify-start items-start gap-0 md:gap-4 text-center text-4xl md:text-6xl">
         <article className="w-full flex ">
           <div className={`${h ? "M" : ""}`}>
             <span
@@ -371,13 +371,13 @@ export default function Home() {
           Frontend Dev / React / Firebase/ Tailwind
         </p>
 
-        <button className="w-36 h-12 rounded-md border text-lg">
+        {/* <button className="w-36 h-12 rounded-md border text-lg">
           Contact Me
-        </button>
+        </button> */}
       </article>
 
-      <div className="w-1/3 h-2/3 flex justify-center items-center ">
-        <img className="letter w-full rotate-6 " src={letter} alt="" />
+      <div className="w-2/3 h-2/3 hidden  lg:flex justify-center items-center ">
+        <img className="letter w-1/2 rotate-6 " src={letter} alt="" />
       </div>
     </>
   )

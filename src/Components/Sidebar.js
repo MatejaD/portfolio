@@ -19,12 +19,12 @@ export default function Sidebar({ isLoading, setIsLoading }) {
   }
 
   return (
-    <nav className=" left-0 w-20 h-full z-10 py-2 flex flex-col items-center justify-between bg-grayDark">
-      <div className="h-1/3 w-full flex justify-center items-start">
+    <nav className=" left-0 md:w-20 w-full md:h-full h-20 z-10 py-2 flex flex-row md:flex-col items-center justify-between bg-grayDark">
+      <div className="md:h-1/3 h-full md:w-full w-1/5  flex justify-center items-center md:items-start">
         <h2>Mateja</h2>
       </div>
 
-      <div className="w-full h-1/3  flex flex-col justify-evenly items-center text-3xl">
+      <div className="md:h-1/3 h-full md:w-full w-1/3 flex flex-row md:flex-col justify-evenly gap-4 md:gap-0 items-center text-3xl">
         <span
           onClick={() => navigateToPage("/")}
           className="home cursor-pointer w-full h-12 flex justify-center items-center relative hover:text-grayDark duration-150 "
@@ -54,7 +54,7 @@ export default function Sidebar({ isLoading, setIsLoading }) {
         </span>
       </div>
 
-      <div className="w-fu;; h-1/3 flex flex-col justify-end items-end gap-6 text-xl ">
+      <div className="md:h-1/3 h-full md:w-full w-1/3 flex flex-row md:flex-col justify-center items-center gap-6 md:gap-6 text-xl ">
         <a target={"_blank"} href="http://github.com/MatejaD">
           <BsGithub />
         </a>

@@ -285,7 +285,7 @@ export default function App() {
   const randomNumber = () => {}
 
   return (
-    <main className="font-text w-screen h-screen relative flex justify-start items-center gap-24 shadow-md shadow-white bg-background text-white">
+    <main className="font-text w-screen h-screen relative flex flex-col md:flex-row  justify-start items-center gap-24 shadow-md shadow-white bg-background text-white">
       <Sidebar isLoading={isLoading} setIsLoading={setIsLoading} />
       {array.map((item) => {
         return (

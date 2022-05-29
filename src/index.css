@@ -384,7 +384,7 @@ p {
 /* Projects Overlay */
 
 .project1:hover .project1-overlay{
-  transform: translateY(0);
+  transform: translateY(-100%);
 }
 
 /* Snowflakes */
