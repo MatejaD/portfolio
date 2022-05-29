@@ -80,9 +80,9 @@ export default function Projects() {
     setCurrentPage(pageNumber)
   }
   return (
-    <div className="w-10/12 h-5/6 flex justify-center items-center  ">
-      <div className="w-11/12 h-full  flex flex-col justify-between items-start gap-2  text-6xl ">
-        <div className="w-1/2 h-20 gap-6 flex">
+    <div className="md:w-10/12 w-full  h-screen md:h-5/6 flex flex-col md:flex-row  justify-center items-center  ">
+      <div className="w-11/12 h-full  flex flex-col justify-between items-start gap-2 md:text-6xl text-5xl ">
+        <div className="w-1/2 h-20 gap-6  flex justify-start items-end ">
           <div className="flex justify-start items-start border-b-2 rounded-md border-purple">
             <div className={`${m ? "M" : ""} `}>
               <span
@@ -174,12 +174,12 @@ export default function Projects() {
             </div>
           </div>
         </div>
-        <div className="w-full h-full relative   border-purple  rounded-md  flex flex-col justify-between gap-6 border-b items-center">
+        <div className="md:w-full w-3-4 h-3/4 md:h-full relative   border-purple  rounded-md  flex flex-col justify-between gap-6 border-b items-center">
           {currentPost.map((project) => {
             return (
               <>
                 <div
-                  className="absolute right-0 flex justify-between items-center w-1/6 h-10 -top-10 z-20
+                  className="absolute lg:right-0 right-16 flex justify-between items-center w-1/6 h-10 -top-10 z-20 gap-4
                  px-4"
                 >
                   <a
@@ -206,17 +206,26 @@ export default function Projects() {
                     />
                     <div className="project1-overlay duration-700 text-lg flex flex-col justify-start items-start p-4 ease-in-out rounded-t-md absolute w-full h-full bg-purple gap-4  border-purple z-50 ">
                       <div className="w-full h-1/6 border-b-2 border-background flex justify-start gap-4 items-center">
-                        <h2 className="text-4xl">Build with:</h2>
-                        <div className="flex gap-8 justify-start items-center">
+                        <h2 className="lg:text-4xl text-2xl">Build with:</h2>
+                        <div className="flex lg:gap-8 gap-6 justify-start items-center">
                           {project.tech.map((item) => {
                             return (
-                              <img className="w-10" src={item} alt="icon" />
+                              <img
+                                className="lg:w-10 w-8"
+                                src={item}
+                                alt="icon"
+                              />
                             )
                           })}
                         </div>
                       </div>
-                      <div className="w-full h-5/6 border-b-2 border-background flex justify-start px-6 items-start">
-                        <p className="text-2xl">{project.desc}</p>
+                      <div className="w-full h-full  border-b-2 border-background flex justify-start lg:px-6 px-1 items-start">
+                        <p
+                          style={{ fontSize: "0.75rem" }}
+                          className="lg:text-2xl "
+                        >
+                          {project.desc}
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -226,7 +235,7 @@ export default function Projects() {
           })}
         </div>
       </div>
-      <ul className="flex flex-col justify-center items-center gap-8 text-5xl w-1/4 h-1/3">
+      <ul className="flex flex-row md:flex-col justify-center items-center gap-8 text-2xl md:text-5xl w-1/4 md:h-1/3 h-1/6">
         {pageNumbers.map((num) => {
           return (
             <li key={num}>

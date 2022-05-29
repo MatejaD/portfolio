@@ -51,8 +51,8 @@ export default function About() {
 
   return (
     <>
-      <div className="w-2/4 h-3/4 ">
-        <div className="w-4/5 h-full flex flex-col justify-evenly items-start p-4  text-6xl ">
+      <div className="md:w-2/4 w-full md:h-3/4 h-3/4  ">
+        <div className="md:w-4/5 w-full h-full  flex flex-col justify-evenly items-start p-4  text-5xl md:text-6xl ">
           <div className="w-full h-20 gap-6 flex">
             <div className="flex">
               <div className={`${a ? "M" : ""} `}>
@@ -128,7 +128,7 @@ export default function About() {
               </div>
             </div>
           </div>
-          <div className="text-container w-full overflow-hidden h-2/3 flex flex-col justify-center duration-300 ease-in-out gap-6 items-center text-lg  font-smallText">
+          <div className="text-container w-full overflow-hidden h-full flex flex-col justify-center duration-300 ease-in-out gap-3 lg:gap-8 items-center text-xl font-smallText">
             <p className="">
               I'm a self taught Frontend developer based in Novi Pazar, Serbia.
               I fell in love with building things from the young age.
@@ -150,7 +150,7 @@ export default function About() {
           </div>
         </div>
       </div>
-      <div className="stage w-1/6 h-1/3">
+      <div className="stage w-1/6 h-1/3 hidden lg:block">
         <div className="cubespinner">
           <div className="face1">
             <img className="w-1/2" src={ReactIcon} alt="React icon" />
