@@ -137,8 +137,8 @@ export default function About() {
             <p className="">
               {" "}
               My work is mainly done with React, but im always open to learning
-              new technology. I have experience with state management solutions
-              such as <e className="text-purple">Redux</e> and useContext.
+              new technology. I have experience working with state management
+              tools such as <e className="text-purple">Redux</e> and useContext.
             </p>
 
             <p className="">

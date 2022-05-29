@@ -34,12 +34,10 @@
   }
 }
 
-.M:hover{
-}
 
 @keyframes bounce {
   25%{
-    transform: scale(0.8,1.3);
+    transform: scale(1,1.3);
   }
 
         50% {
@@ -79,6 +77,7 @@
   transition-timing-function: ease-in;
 }
 
+
 .about:hover::after {
   display: block;
   color: lightblue;
@@ -117,6 +116,27 @@
   transform: translate(-50%, 0);
   display: none;
   font-size: 1rem;
+  transition-duration: 2s;
+  transition-timing-function: ease-in;
+}
+
+.projects:hover::after {
+  display: block;
+  color: lightblue;
+  letter-spacing: 1px;
+  font-weight: bold;
+  opacity: 1;
+  transition-duration: 2s;
+  transition-timing-function: ease-in;
+}
+
+.projects::after {
+  content: 'Projects';
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: none;
+  font-size:1rem;
   transition-duration: 2s;
   transition-timing-function: ease-in;
 }
@@ -365,4 +385,124 @@ p {
 
 .project1:hover .project1-overlay{
   transform: translateY(0);
+}
+
+/* Snowflakes */
+
+.snowflake{
+  position: absolute;
+  width: 6px;
+  visibility: hidden;
+  height: 6px;
+  border-radius: 100%;
+  background-color: antiquewhite;
+  bottom: 0;
+  /* animation-name: snowflake;
+  animation-iteration-count: infinite; */
+}
+
+@keyframes snowflake {
+  0%{
+    bottom: 1%;
+    display: block;
+    visibility: visible;
+  }
+
+  100%{
+    bottom: 70%;
+    visibility: hidden;
+      display: block;
+      
+  }
+  
+}
+
+
+/* Loading Animation */
+
+.battery {
+  height: 110px;
+  width: 225px;
+  border: 8px solid #ffffff;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 12px;
+}
+
+.battery:before {
+  content: "";
+  position: absolute;
+  margin: auto;
+  height: 55px;
+  width: 20px;
+  background-color: #ffffff;
+  right: -25px;
+  top: 0;
+  bottom: 0;
+  border-radius: 0 7px 7px 0;
+}
+
+.battery:after {
+  content: "";
+  position: absolute;
+  height: 80px;
+  width: 40px;
+  background-color: green;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 10px;
+  border-radius: 5px;
+  box-shadow: 50px 0 transparent,
+    100px 0 transparent,
+    150px 0 transparent;
+  animation: charge 1.6s 1;
+}
+
+@keyframes charge {
+  22% {
+    box-shadow: 50px 0 transparent,
+      100px 0 transparent,
+      150px 0 transparent;
+  }
+
+  25% {
+    box-shadow: 50px 0 green,
+      100px 0 transparent,
+      150px 0 transparent;
+  }
+
+  47% {
+    box-shadow: 50px 0 green,
+      100px 0 transparent,
+      150px 0 transparent;
+  }
+
+  50% {
+    box-shadow: 50px 0 green,
+      100px 0 green,
+      150px 0 transparent;
+  }
+
+  72% {
+    box-shadow: 50px 0 green,
+      100px 0 green,
+      150px 0 transparent;
+  }
+
+  75% {
+    box-shadow: 50px 0 green,
+      100px 0 green,
+      150px 0 green
+  }
+
+  95% {
+    box-shadow: 50px 0 green,
+      100px 0 green,
+      150px 0 green;
+  }
 }

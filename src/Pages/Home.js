@@ -87,7 +87,7 @@ export default function Home() {
           <div className={`${h ? "M" : ""}`}>
             <span
               onMouseLeave={() => setH(true)}
-              onMouseEnter={() => setH(false)}
+              //   onMouseEnter={() => setH(false)}
               className=" hover:text-blue"
             >
               H

@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react"
 
+import ImagoImage from "../Images/CubeImages/ImagoImage.png"
+
 export default function Projects() {
   const [m, setM] = useState(false)
   const [y, setY] = useState(false)
@@ -35,6 +37,23 @@ export default function Projects() {
     }, 400)
   }, [])
 
+  const [posts, setPosts] = useState([ImagoImage, "secondImage", "thirdImage"])
+  const [currentPage, setCurrentPage] = useState(1)
+  const [postsPerPage, setPostsPerPage] = useState(1)
+
+  const indexOfLastPost = currentPage * postsPerPage
+  const indexOfFirstPost = indexOfLastPost - postsPerPage
+
+  const currentPost = posts.slice(indexOfFirstPost, indexOfLastPost)
+  let pageNumbers = []
+
+  for (let i = 1; i <= Math.ceil(posts.length / postsPerPage); i++) {
+    pageNumbers.push(i)
+  }
+
+  const paginate = (pageNumber) => {
+    setCurrentPage(pageNumber)
+  }
   return (
     <div className="w-11/12 h-3/4 ">
       <div className="w-11/12 h-full flex flex-col justify-evenly items-start p-4  text-6xl ">
@@ -102,33 +121,32 @@ export default function Projects() {
             </div>
           </div>
         </div>
-        <div className="w-full h-full  border-purple flex justify-between border-b items-center">
-          <div className="project1 w-1/4 h-3/4 relative overflow-hidden  flex flex-col justify-cetner items-center">
-            <div className="w-full h-full bg-blue rounded-md">
-              <h2>s</h2>
-            </div>
-            <p className="text-2xl ">Imago</p>
-            <div className="project1-overlay duration-500 text-lg flex justify-center items-start p-4 ease-in-out rounded-t-md absolute w-full h-full bg-purple translate-y-full">
-              <p>
-                Imago is a habit tracking app that contains character
-                customazation, leveling up and much more stuff...
-              </p>
-            </div>
-          </div>
-
-          <div className="w-1/4 h-3/4 flex flex-col justify-cetner items-center bg-white">
-            <div className="w-full h-full bg-blue">
-              <h2>s</h2>
-            </div>
-            <p className="text-2xl text-background">E-com store</p>
-          </div>
-
-          <div className="w-1/4 h-3/4 flex flex-col justify-cetner items-center bg-white">
-            <div className="w-full h-full bg-blue">
-              <h2>s</h2>
-            </div>
-            <p className="text-2xl text-background">Portfolio</p>
-          </div>
+        <div className="w-full h-full  border-purple flex justify-between gap-6 border-b items-center">
+          {currentPost.map((item) => {
+            return (
+              <div className="project1  w-1/3 h-3/4 relative overflow-hidden  flex flex-col justify-cetner items-center">
+                <div className="w-full h-full overflow-hidden relative bg-blue rounded-md">
+                  <img className="w-full h-full" src={item} alt="" />
+                  <div className="project1-overlay duration-500 text-lg flex justify-center items-start p-4 ease-in-out rounded-t-md absolute w-full h-full bg-purple z-20 translate-y-full">
+                    <p>
+                      Imago is a habit tracking app that contains character
+                      customazation, leveling up and much more stuff...
+                    </p>
+                  </div>
+                </div>
+                <p className="text-2xl ">Imago</p>
+              </div>
+            )
+          })}
+          <ul>
+            {pageNumbers.map((num) => {
+              return (
+                <li key={num}>
+                  <a onClick={() => paginate(num)}>{num}</a>
+                </li>
+              )
+            })}
+          </ul>
         </div>
       </div>
     </div>
