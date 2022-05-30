@@ -3,6 +3,12 @@ import React, { useEffect, useState } from "react"
 import ImagoImage from "../Images/CubeImages/ImagoImage.png"
 import ImagoImageSmall from "../Images/CubeImages/ImagoImageSmall.png"
 
+import EcomImage from "../Images/CubeImages/E-comImage.png"
+import EcomImageSmall from "../Images/CubeImages/E-comImageSmall.png"
+
+import PortfolioImage from "../Images/CubeImages/PortfolioImage.png"
+import PortfolioImageSmall from "../Images/CubeImages/PortfolioImageSmall.png"
+
 // Techonology
 import ReactIcon from "../Images/CubeImages/ReactIcon.png"
 import FirebaseIcon from "../Images/CubeImages/FirebaseLogo.png"
@@ -50,21 +56,21 @@ export default function Projects() {
       image: ImagoImage,
       imageSmall: ImagoImageSmall,
       tech: [ReactIcon, FirebaseIcon, ReduxIcon, CssIcon, TailwindIcon],
-      desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, libero tenetur. Quidem vitae magnam tempora deleniti alias animi porro harum et eaque voluptates officiis expedita velit veniam, repellat aperiam, autem ex libero numquam. Doloremque deleniti sint inventore cum, officia aliquid quisquam modi quo ab fuga saepe minima obcaecati molestiae reiciendis veniam hic ea repellendus asperiores consequuntur expedita illo laborum fugit optio! Facere libero nisi error aliquam. Sint, distinctio quis! Enim animi impedit minus eveniet voluptas modi, quas consequuntur quia vitae provident ut amet hic iure laudantium aspernatur quisquam excepturi! Fugit ut, dolor magni quos sint tempora commodi architecto temporibus quasi?",
+      desc: "Imago is an online task management application whos main goal is to increase its users productivity. Users can earn coins, as well as experience, by completing their tasks and buy items to customize their character. If a user skips a doing a habit he will lose a percentage of his health. The app is easy to use and mobile friendly. It is built with React which uses Redux as a state management tool and Firebase that authenticates and stores users and their data. Users can create their own accounts own Imago accounts or login with Google.",
       gitHub: "https://github.com/MatejaD/Imago",
       demo: "https://immago.netlify.app",
     },
     {
-      image: ImagoImage,
-      imageSmall: ImagoImageSmall,
-      tech: [ReactIcon, CssIcon, TailwindIcon],
-      desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, libero tenetur. Quidem vitae magnam tempora deleniti alias animi porro harum et eaque voluptates officiis expedita velit veniam, repellat aperiam, autem ex libero numquam. Doloremque deleniti sint inventore cum, officia aliquid quisquam modi quo ab fuga saepe minima obcaecati molestiae reiciendis veniam hic ea repellendus asperiores consequuntur expedita illo laborum fugit optio! Facere libero nisi error aliquam. Sint, distinctio quis! Enim animi impedit minus eveniet voluptas modi, quas consequuntur quia vitae provident ut amet hic iure laudantium aspernatur quisquam excepturi! Fugit ut, dolor magni quos sint tempora commodi architecto temporibus quasi?",
+      image: EcomImage,
+      imageSmall: EcomImageSmall,
+      tech: [ReactIcon, CssIcon],
+      desc: "E-com is an online store for users to buy furniture. It is built with React and useContext that is combined with useReducer for a state managmenet solution. Main features of this app are adding items to the cart, removing them, filtering items with their categories and searching for them by their names. E-com can be used both on bigger and smaller screens.",
     },
     {
-      image: ImagoImage,
-      imageSmall: ImagoImageSmall,
+      image: PortfolioImage,
+      imageSmall: PortfolioImageSmall,
       tech: [ReactIcon, CssIcon, TailwindIcon],
-      desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, libero tenetur. Quidem vitae magnam tempora deleniti alias animi porro harum et eaque voluptates officiis expedita velit veniam, repellat aperiam, autem ex libero numquam. Doloremque deleniti sint inventore cum, officia aliquid quisquam modi quo ab fuga saepe minima obcaecati molestiae reiciendis veniam hic ea repellendus asperiores consequuntur expedita illo laborum fugit optio! Facere libero nisi error aliquam. Sint, distinctio quis! Enim animi impedit minus eveniet voluptas modi, quas consequuntur quia vitae provident ut amet hic iure laudantium aspernatur quisquam excepturi! Fugit ut, dolor magni quos sint tempora commodi architecto temporibus quasi?",
+      desc: "Portfolio is a website you are currently on! It is a place where im sharing my work as a Frontend Developer. This portfolio is built with React and TailwindCss. It uses a simple routing that React Router offers and a couple of animations that are made with a mix of Css and Tailwind. ",
     },
   ])
   const [currentPage, setCurrentPage] = useState(1)
@@ -184,20 +190,20 @@ export default function Projects() {
             return (
               <>
                 <div
-                  className="absolute lg:right-0 right-16 flex justify-between items-center w-1/6 h-10 -top-10 z-20 gap-4
+                  className="absolute lg:right-4 right-20 flex justify-between items-start w-1/6 h-10 -top-10 z-20 gap-4
                  px-4"
                 >
                   <a
                     target={"_blank"}
                     href={project.gitHub}
-                    className="text-base"
+                    className="text-base md:text-2xl"
                   >
                     gitHub
                   </a>
                   <a
                     target={"_blank"}
                     href={project.demo}
-                    className="text-base"
+                    className="text-base md:text-2xl"
                   >
                     Demo
                   </a>
@@ -228,8 +234,10 @@ export default function Projects() {
                           })}
                         </div>
                       </div>
-                      <div className="w-full h-full  border-b-2 border-background flex justify-start lg:px-6 px-1 items-start">
-                        <p className="lg:text-2xl text-xs ">{project.desc}</p>
+                      <div className="w-full h-full border-b-2 border-background flex justify-start lg:px-6  px-2 items-start">
+                        <p className="desc lg:text-3xl text-sm text-left px-2  w-full h-full  ">
+                          {project.desc}
+                        </p>
                       </div>
                     </div>
                   </div>

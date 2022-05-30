@@ -6,8 +6,12 @@
 @tailwind utilities;
 
 
-p,span,h1,h2{
+p,span,h1,h2,button,img{
   user-select: none;
+}
+
+.desc{
+  letter-spacing: 0.5px;
 }
 
 .M{
