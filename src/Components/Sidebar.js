@@ -40,13 +40,6 @@ export default function Sidebar({ isLoading, setIsLoading }) {
         </span>
 
         <span
-          onClick={() => navigateToPage("/skills")}
-          className="skills cursor-pointer w-full h-12 flex justify-center items-center relative hover:text-grayDark duration-150 "
-        >
-          <BsTools />
-        </span>
-
-        <span
           onClick={() => navigateToPage("/projects")}
           className="projects cursor-pointer w-full h-12 flex justify-center items-center relative hover:text-grayDark duration-150 "
         >
@@ -64,10 +57,6 @@ export default function Sidebar({ isLoading, setIsLoading }) {
           href="https://www.linkedin.com/in/mateja-drobnjak-755147227/"
         >
           <BsLinkedin />
-        </a>
-
-        <a target={"_blank"} href="http://github.com/MatejaD">
-          <BsDiscord />
         </a>
       </div>
     </nav>

@@ -129,22 +129,23 @@ export default function About() {
           </div>
           <div className="text-container w-full overflow-hidden h-full flex flex-col justify-center duration-300 ease-in-out gap-3 lg:gap-8 items-center text-xl font-smallText">
             <p className="">
-              I'm a self taught Frontend developer based in Novi Pazar, Serbia.
-              I fell in love with building things from the young age.
+              I'm a self taught Frontend developer based in Novi Pazar, Serbia .
+              I fell in love with building things from the young age .
             </p>
 
             <p className="">
               {" "}
               My work is mainly done with React, but im always open to learning
               new technology. I have experience working with state management
-              tools such as <e className="text-purple">Redux</e> and useContext.
+              tools such as <e className="text-purple">Redux</e> and{" "}
+              <e className="text-blue">useContext</e> .
             </p>
 
             <p className="">
               {" "}
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum
-              sunt neque officiis ipsa aliquam amet blanditiis fugiat vel porro
-              quae.
+              Besides building cool websites i enjoy going on hikes and runs.
+              Cup of coffe, laptop, internet connection and im all set up!
+              Currently im open for work so feel free to get in touch with me!
             </p>
           </div>
         </div>
