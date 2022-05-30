@@ -15,7 +15,7 @@ export default function Sidebar({ isLoading, setIsLoading }) {
     setTimeout(() => {
       setIsLoading(false)
       navigate(page, { replace: true })
-    }, 1500)
+    }, 500)
   }
 
   return (

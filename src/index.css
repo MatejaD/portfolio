@@ -436,7 +436,7 @@ p {
   box-shadow: 50px 0 transparent,
     100px 0 transparent,
     150px 0 transparent;
-  animation: charge 1.6s 1;
+  animation: charge 0.5s 1;
 }
 
 @keyframes charge {
