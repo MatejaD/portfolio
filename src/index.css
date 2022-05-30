@@ -6,7 +6,7 @@
 @tailwind utilities;
 
 
-p,span,h1,h2,button,img{
+.home,.projects,.about,img{
   user-select: none;
 }
 
