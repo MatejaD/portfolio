@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react"
+import { useNavigate } from "react-router-dom"
 
 import letter from "../letter.png"
 
@@ -80,14 +81,16 @@ export default function Home() {
     }, 500)
   }, [])
 
+  const navigate = useNavigate()
+
   return (
     <>
-      <article className="md:w-2/6 w-full  px-2 h-full justify-center items-start  md:h-2/3 flex flex-col  md:justify-start md:items-start gap-0 md:gap-4 text-center text-4xl md:text-6xl">
+      <article className="md:w-2/6 w-full  px-2 h-full justify-center items-start  md:h-2/3 flex flex-col  md:justify-start md:items-start gap-2 md:gap-4 text-center text-4xl md:text-6xl">
         <article className="w-full flex ">
           <div className={`${h ? "M" : ""}`}>
             <span
               onMouseLeave={() => setH(true)}
-              //   onMouseEnter={() => setH(false)}
+              onMouseEnter={() => setH(false)}
               className=" hover:text-blue"
             >
               H
@@ -371,9 +374,16 @@ export default function Home() {
           Frontend Dev / React / Firebase/ Tailwind
         </p>
 
-        {/* <button className="w-36 h-12 rounded-md border text-lg">
-          Contact Me
-        </button> */}
+        <button
+          onClick={() => {
+            setTimeout(() => {
+              navigate("/projects", { replace: true })
+            }, 400)
+          }}
+          className="projects-btn w-1/2 h-16 text-center rounded-md text-xl font-text"
+        >
+          My Projects
+        </button>
       </article>
 
       <div className="w-1/3 h-2/3 hidden  lg:flex justify-center items-center ">

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react"
 
 import ImagoImage from "../Images/CubeImages/ImagoImage.png"
+import ImagoImageSmall from "../Images/CubeImages/ImagoImageSmall.png"
 
 // Techonology
 import ReactIcon from "../Images/CubeImages/ReactIcon.png"
@@ -47,6 +48,7 @@ export default function Projects() {
   const [posts, setPosts] = useState([
     {
       image: ImagoImage,
+      imageSmall: ImagoImageSmall,
       tech: [ReactIcon, FirebaseIcon, ReduxIcon, CssIcon, TailwindIcon],
       desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, libero tenetur. Quidem vitae magnam tempora deleniti alias animi porro harum et eaque voluptates officiis expedita velit veniam, repellat aperiam, autem ex libero numquam. Doloremque deleniti sint inventore cum, officia aliquid quisquam modi quo ab fuga saepe minima obcaecati molestiae reiciendis veniam hic ea repellendus asperiores consequuntur expedita illo laborum fugit optio! Facere libero nisi error aliquam. Sint, distinctio quis! Enim animi impedit minus eveniet voluptas modi, quas consequuntur quia vitae provident ut amet hic iure laudantium aspernatur quisquam excepturi! Fugit ut, dolor magni quos sint tempora commodi architecto temporibus quasi?",
       gitHub: "https://github.com/MatejaD/Imago",
@@ -54,11 +56,13 @@ export default function Projects() {
     },
     {
       image: ImagoImage,
+      imageSmall: ImagoImageSmall,
       tech: [ReactIcon, CssIcon, TailwindIcon],
       desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, libero tenetur. Quidem vitae magnam tempora deleniti alias animi porro harum et eaque voluptates officiis expedita velit veniam, repellat aperiam, autem ex libero numquam. Doloremque deleniti sint inventore cum, officia aliquid quisquam modi quo ab fuga saepe minima obcaecati molestiae reiciendis veniam hic ea repellendus asperiores consequuntur expedita illo laborum fugit optio! Facere libero nisi error aliquam. Sint, distinctio quis! Enim animi impedit minus eveniet voluptas modi, quas consequuntur quia vitae provident ut amet hic iure laudantium aspernatur quisquam excepturi! Fugit ut, dolor magni quos sint tempora commodi architecto temporibus quasi?",
     },
     {
       image: ImagoImage,
+      imageSmall: ImagoImageSmall,
       tech: [ReactIcon, CssIcon, TailwindIcon],
       desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, libero tenetur. Quidem vitae magnam tempora deleniti alias animi porro harum et eaque voluptates officiis expedita velit veniam, repellat aperiam, autem ex libero numquam. Doloremque deleniti sint inventore cum, officia aliquid quisquam modi quo ab fuga saepe minima obcaecati molestiae reiciendis veniam hic ea repellendus asperiores consequuntur expedita illo laborum fugit optio! Facere libero nisi error aliquam. Sint, distinctio quis! Enim animi impedit minus eveniet voluptas modi, quas consequuntur quia vitae provident ut amet hic iure laudantium aspernatur quisquam excepturi! Fugit ut, dolor magni quos sint tempora commodi architecto temporibus quasi?",
     },
@@ -79,6 +83,7 @@ export default function Projects() {
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber)
   }
+
   return (
     <div className="md:w-10/12 w-full  h-screen md:h-5/6 flex flex-col md:flex-row  justify-center items-center  ">
       <div className="w-11/12 h-full  flex flex-col justify-between items-start gap-2 md:text-6xl text-5xl ">
@@ -201,12 +206,16 @@ export default function Projects() {
                   <div className="w-full h-full   relative  rounded-md">
                     <img
                       className="w-full h-full rounded-md "
-                      src={project.image}
+                      src={
+                        window.innerWidth < 600
+                          ? project.imageSmall
+                          : project.image
+                      }
                       alt="Project image"
                     />
                     <div className="project1-overlay duration-700 text-lg flex flex-col justify-start items-start p-4 ease-in-out rounded-t-md absolute w-full h-full bg-purple gap-4  border-purple z-50 ">
                       <div className="w-full h-1/6 border-b-2 border-background flex justify-start gap-4 items-center">
-                        <h2 className="lg:text-4xl text-2xl">Build with:</h2>
+                        <h2 className="lg:text-4xl text-lg">Build with:</h2>
                         <div className="flex lg:gap-8 gap-6 justify-start items-center">
                           {project.tech.map((item) => {
                             return (
