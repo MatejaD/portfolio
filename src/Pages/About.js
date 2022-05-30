@@ -135,7 +135,7 @@ export default function About() {
 
             <p className="">
               {" "}
-              My work is mainly done with React, but im always open to learning
+              My work is mainly done with React, but I'm always open to learning
               new technology. I have experience working with state management
               tools such as <e className="text-purple">Redux</e> and{" "}
               <e className="text-blue">useContext</e> .
@@ -143,9 +143,9 @@ export default function About() {
 
             <p className="">
               {" "}
-              Besides building cool websites i enjoy going on hikes and runs.
-              Cup of coffe, laptop, internet connection and im all set up!
-              Currently im open for work so feel free to get in touch with me!
+              Besides building cool websites I enjoy going on hikes and runs.
+              Cup of coffee, laptop, internet connection and I'm all set up!
+              Currently I'm open for work so feel free to get in touch with me!
             </p>
           </div>
         </div>

@@ -56,7 +56,7 @@ export default function Projects() {
       image: ImagoImage,
       imageSmall: ImagoImageSmall,
       tech: [ReactIcon, FirebaseIcon, ReduxIcon, CssIcon, TailwindIcon],
-      desc: "Imago is an online task management application whos main goal is to increase its users productivity. Users can earn coins, as well as experience, by completing their tasks and buy items to customize their character. If a user skips a doing a habit he will lose a percentage of his health. The app is easy to use and mobile friendly. It is built with React which uses Redux as a state management tool and Firebase that authenticates and stores users and their data. Users can create their own accounts own Imago accounts or login with Google.",
+      desc: "Imago is an online task management application whos main goal is to increase its users productivity. Users can earn coins, as well as experience, by completing their tasks and buy items to customize their character. If a user skips his habit he will lose a percentage of his health. The app is easy to use and mobile friendly. It is built with React which uses Redux as a state management tool and Firebase that authenticates and stores users and their data. Users can create their own accounts own Imago accounts or login with Google.",
       gitHub: "https://github.com/MatejaD/Imago",
       demo: "https://immago.netlify.app",
     },
