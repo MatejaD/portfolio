@@ -5,6 +5,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body{
+  background-color: #252525;
+}
+
 
 .home,.projects,.about,img{
   user-select: none;
