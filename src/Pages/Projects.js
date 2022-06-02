@@ -91,8 +91,8 @@ export default function Projects() {
   }
 
   return (
-    <div className="md:w-10/12 w-full  h-screen md:h-5/6 flex flex-col md:flex-row  justify-center items-center  ">
-      <div className="w-11/12 h-full  flex flex-col justify-between items-start gap-2 md:text-6xl text-5xl ">
+    <div className="md:w-10/12 w-full  h-5/6  md:h-5/6  flex flex-col md:flex-row  justify-center items-center  ">
+      <div className="w-11/12 h-full  flex flex-col items-center md:justify-between md:items-start gap-2 md:text-6xl text-5xl ">
         <div className="w-1/2 h-20 gap-6  flex justify-start items-end ">
           <div className="flex justify-start items-start border-b-2 rounded-md border-purple">
             <div className={`${m ? "M" : ""} `}>
@@ -185,7 +185,7 @@ export default function Projects() {
             </div>
           </div>
         </div>
-        <div className="md:w-full w-3-4 h-3/4 md:h-full relative   border-purple  rounded-md  flex flex-col justify-between gap-6 border-b items-center">
+        <div className="md:w-full w-4/5 h-full md:h-full  relative  rounded-md  flex flex-col justify-between gap-6  items-center">
           {currentPost.map((project) => {
             return (
               <>
@@ -208,7 +208,7 @@ export default function Projects() {
                     Demo
                   </a>
                 </div>
-                <div className=" project1 overflow-hidden w-full h-full relative  flex flex-col justify-cetner items-center rounded-md">
+                <div className=" project1  overflow-hidden w-full h-5/6 relative  flex flex-col justify-start items-start  rounded-md">
                   <div className="w-full h-full   relative  rounded-md">
                     <img
                       className="w-full h-full rounded-md "
@@ -234,7 +234,7 @@ export default function Projects() {
                           })}
                         </div>
                       </div>
-                      <div className="w-full h-full border-b-2 border-background flex justify-start lg:px-6  px-2 items-start">
+                      <div className="w-full h-full border-b-2 border-background flex justify-start lg:px-6 px-2 overflow-auto items-start">
                         <p className="desc lg:text-3xl text-sm text-left px-2  w-full h-full  ">
                           {project.desc}
                         </p>
@@ -247,7 +247,7 @@ export default function Projects() {
           })}
         </div>
       </div>
-      <ul className="flex flex-row md:flex-col justify-center items-center gap-8 text-2xl md:text-5xl w-1/4 md:h-1/3 h-1/6">
+      <ul className="flex flex-row md:flex-col justify-center items-center gap-8 text-2xl md:text-5xl w-1/4 md:h-1/3 h-10 mb-6">
         {pageNumbers.map((num) => {
           return (
             <li key={num}>

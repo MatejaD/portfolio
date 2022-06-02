@@ -6,7 +6,12 @@
 @tailwind utilities;
 
 body{
+  justify-content: center;
+  align-items: center;
   background-color: #252525;
+  height: 100vh;
+  width: 100vw;
+  overflow-y: hidden;
 }
 
 img{
