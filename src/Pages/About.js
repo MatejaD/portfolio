@@ -129,8 +129,8 @@ export default function About() {
           </div>
           <div className="text-container w-full overflow-hidden h-full flex flex-col justify-center duration-300 ease-in-out gap-3 lg:gap-8 items-center text-xl font-smallText">
             <p className="">
-              I'm a self taught Frontend developer based in Novi Pazar, Serbia .
-              I fell in love with building things from the young age .
+              I'm a self-taught Front-end developer based in Novi Pazar, Serbia.
+              I fell in love with building things from a young age.
             </p>
 
             <p className="">
@@ -144,8 +144,8 @@ export default function About() {
             <p className="">
               {" "}
               Besides building cool websites I enjoy going on hikes and runs.
-              Cup of coffee, laptop, internet connection and I'm all set up!
-              Currently I'm open for work so feel free to get in touch with me!
+              Cup of coffee, laptop, internet connection, and I'm all set up!
+              Currently, I'm open for work so feel free to get in touch with me!
             </p>
           </div>
         </div>
