@@ -26,7 +26,6 @@ export default function App() {
             style={{
               padding: `${Math.random() * 0.3}rem`,
               left: `${Math.random() * 95}%`,
-              // bottom: `${Math.random() * 95}%`,
               opacity: `${Math.random() * 0.4} `,
               animationDuration: `${(Math.random() + 3) * 20}s`,
               animationName: "snowflake",

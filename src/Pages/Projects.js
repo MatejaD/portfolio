@@ -70,7 +70,7 @@ export default function Projects() {
       image: PortfolioImage,
       imageSmall: PortfolioImageSmall,
       tech: [ReactIcon, CssIcon, TailwindIcon],
-      desc: "The portfolio is a website you are currently on! It is a place where I'm sharing my work as a Frontend Developer. This portfolio is built with React and TailwindCss. It uses a simple routing that React Router offers and a couple of animations that are made with a mix of CSS and Tailwind. ",
+      desc: "The portfolio is a website you are currently on! It is a place where I'm sharing my work as a Frontend Developer. This portfolio is built with React and TailwindCss. It uses a simple routing that React Router offers and a couple of animations that are made with a mix of CSS and Tailwind.",
     },
   ])
   const [currentPage, setCurrentPage] = useState(1)
