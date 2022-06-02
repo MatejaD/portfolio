@@ -9,6 +9,9 @@ body{
   background-color: #252525;
 }
 
+img{
+  aspect-ratio: 1/1;
+}
 
 .home,.projects,.about,img{
   user-select: none;
