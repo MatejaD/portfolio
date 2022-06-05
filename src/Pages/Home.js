@@ -374,16 +374,13 @@ export default function Home() {
           Frontend Dev / React / Firebase/ Tailwind
         </p>
 
-        <button
-          onClick={() => {
-            setTimeout(() => {
-              navigate("/projects", { replace: true })
-            }, 400)
-          }}
-          className="projects-btn w-1/2 h-16 text-center rounded-md text-xl font-text"
+        <a
+          target="_blank"
+          href="mailto:matejad356@gmail.com"
+          className="projects-btn w-1/2 h-16 flex justify-center items-center text-center rounded-md text-xl font-text"
         >
-          My Projects
-        </button>
+          Contact Me
+        </a>
       </article>
 
       <div className="w-1/3 h-2/3 hidden  lg:flex justify-center items-center ">
