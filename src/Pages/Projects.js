@@ -190,7 +190,7 @@ export default function Projects() {
             return (
               <>
                 <div
-                  className="absolute lg:right-4 right-11 flex justify-between items-start w-1/6 h-10 -top-10 z-20 gap-4
+                  className="absolute lg:right-10 right-20 flex justify-between items-start w-1/6 h-10 -top-10 z-20 gap-4
                  px-4"
                 >
                   <a
@@ -235,7 +235,7 @@ export default function Projects() {
                         </div>
                       </div>
                       <div className="w-full h-full border-b-2 border-background flex justify-start lg:px-6 px-2 overflow-auto items-start">
-                        <p className="desc lg:text-3xl text-sm text-left px-2  w-full h-full  ">
+                        <p className="desc lg:text-3xl text-sm text-left px-1  w-full h-full  ">
                           {project.desc}
                         </p>
                       </div>
@@ -247,7 +247,7 @@ export default function Projects() {
           })}
         </div>
       </div>
-      <ul className="flex flex-row md:flex-col justify-center items-center gap-8 text-2xl md:text-5xl w-1/4 md:h-1/3 h-10 mb-6">
+      <ul className="flex flex-row md:flex-col justify-center md:items-center items-start gap-8 text-3xl md:text-5xl w-1/4 md:h-1/3 h-36 mb-10 ">
         {pageNumbers.map((num) => {
           return (
             <li key={num}>

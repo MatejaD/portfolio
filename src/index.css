@@ -23,7 +23,8 @@ img{
 }
 
 .desc{
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
+  line-height: 150%;
 }
 
 .M{

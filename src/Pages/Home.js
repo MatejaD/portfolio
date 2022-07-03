@@ -85,7 +85,7 @@ export default function Home() {
 
   return (
     <>
-      <article className="md:w-2/6 w-full  px-2 h-full justify-center items-start  md:h-2/3 flex flex-col  md:justify-start md:items-start gap-2 md:gap-4 text-center text-4xl md:text-6xl">
+      <article className="md:w-2/6 w-full  px-2 h-full justify-center  items-start  md:h-2/3 flex flex-col  md:justify-start md:items-start gap-2 md:gap-4 text-center text-4xl md:text-6xl">
         <article className="w-full flex ">
           <div className={`${h ? "M" : ""}`}>
             <span
@@ -371,7 +371,7 @@ export default function Home() {
         </article>
 
         <p className="text-sm opacity-40 w-full text-left h-8">
-          Frontend Dev / React / Firebase/ Tailwind
+          Agile Software Developer / React Developer / Intuitive /
         </p>
 
         <a
