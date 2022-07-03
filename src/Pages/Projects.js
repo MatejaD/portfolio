@@ -92,7 +92,7 @@ export default function Projects() {
 
   return (
     <div className="md:w-10/12 w-full  h-5/6  md:h-5/6  flex flex-col md:flex-row  justify-center items-center  ">
-      <div className="w-11/12 h-full  flex flex-col items-center md:justify-between md:items-start gap-2 md:text-6xl text-5xl ">
+      <div className="w-11/12 h-full  flex flex-col items-center md:justify-between md:items-start gap-2 md:text-6xl text-4xl ">
         <div className="lg:w-1/2 w-4/5 h-20 gap-6 flex justify-start items-end ">
           <div className="flex justify-start items-start border-b-2 rounded-md border-purple">
             <div className={`${m ? "M" : ""} `}>
